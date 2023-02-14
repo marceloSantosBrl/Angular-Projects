@@ -1,0 +1,32 @@
+
+:host {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+    width: 50rem;
+}
+
+main {
+    height: 80vh;
+    display: grid;
+    place-items: center;
+}
+
+footer {
+    display: flex;
+    gap: 1rem;
+    align-content: center;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

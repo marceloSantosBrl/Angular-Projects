@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'semana-sete';
+  fotos = [
+    '/assets/jojo.jpg',
+    '/assets/csm.jpg',
+    '/assets/geass.jpg',
+    '/assets/kaguya.png',
+    '/assets/away.jpg',
+  ];
 }

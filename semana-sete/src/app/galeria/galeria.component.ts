@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-galeria',
@@ -6,33 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./galeria.component.scss'],
 })
 export class GaleriaComponent {
-  currentImage = 0;
+  @Input() fotos: string[] = [];
 
-  imgArray = [
-    '/assets/jojo.jpg',
-    '/assets/csm.jpg',
-    '/assets/geass.jpg',
-    '/assets/kaguya.png',
-    '/assets/away.jpg',
-  ];
+  indexImagemAtual = 0;
 
   nextImage() {
-    if (this.currentImage !== this.imgArray.length - 1) {
-      this.currentImage += 1;
+    if (this.indexImagemAtual !== this.fotos.length - 1) {
+      this.indexImagemAtual += 1;
     }
   }
 
   previousImage() {
-    if (this.currentImage !== 0) {
-      this.currentImage -= 1;
+    if (this.indexImagemAtual !== 0) {
+      this.indexImagemAtual -= 1;
     }
   }
 
   goToFirstImage() {
-    this.currentImage = 0;
+    this.indexImagemAtual = 0;
   }
 
   goToLastImage() {
-    this.currentImage = this.imgArray.length - 1;
+    this.indexImagemAtual = this.fotos.length - 1;
   }
 }

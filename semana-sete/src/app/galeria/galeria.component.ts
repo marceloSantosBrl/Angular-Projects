@@ -6,17 +6,17 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./galeria.component.scss'],
 })
 export class GaleriaComponent {
-  @Input() fotos: string[] = [];
+  @Input() images: string[] = [];
 
   indexImagemAtual = 0;
 
-  nextImage() {
-    if (this.indexImagemAtual !== this.fotos.length - 1) {
+  goToNextImage() {
+    if (this.indexImagemAtual !== this.images.length - 1) {
       this.indexImagemAtual += 1;
     }
   }
 
-  previousImage() {
+  goToPreviousImage() {
     if (this.indexImagemAtual !== 0) {
       this.indexImagemAtual -= 1;
     }
@@ -27,6 +27,6 @@ export class GaleriaComponent {
   }
 
   goToLastImage() {
-    this.indexImagemAtual = this.fotos.length - 1;
+    this.indexImagemAtual = this.images.length - 1;
   }
 }

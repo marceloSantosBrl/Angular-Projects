@@ -1,35 +1,35 @@
 <main>
-  <img [src]="images[indexImagemAtual]" [alt]="'imagem ' + (indexImagemAtual + 1)"/>
+  <img [src]="images[indexOfCurrentImage]" [alt]="'imagem ' + (indexOfCurrentImage + 1)"/>
 </main>
 <footer>
   <div class="footer-text">
-    <p>Imagem {{ indexImagemAtual + 1 }} de {{ images.length }}</p>
+    <p>Imagem {{ indexOfCurrentImage + 1 }} de {{ images.length }}</p>
   </div>
   <div class="btn-group">
     <button
       class="btn btn-dark"
-      [disabled]="indexImagemAtual === 0"
+      [disabled]="indexOfCurrentImage === 0"
       (click)="goToFirstImage()"
     >
       |<
     </button>
     <button
       class="btn btn-primary"
-      [disabled]="indexImagemAtual === 0"
+      [disabled]="indexOfCurrentImage === 0"
       (click)="goToPreviousImage()"
     >
       <
     </button>
     <button
       class="btn btn-primary"
-      [disabled]="indexImagemAtual === images.length - 1"
+      [disabled]="indexOfCurrentImage === images.length - 1"
       (click)="goToNextImage()"
     >
       >
     </button>
     <button
       class="btn btn-dark"
-      [disabled]="indexImagemAtual === images.length - 1"
+      [disabled]="indexOfCurrentImage === images.length - 1"
       (click)="goToLastImage()"
     >
       >|

@@ -1,0 +1,40 @@
+<div class="d-flex flex-column justify-content-between min-vh-100">
+  <nav>
+    <h1 class="text-center bg-primary bg-gradient text-white h-25">
+      Fotos de anime
+    </h1>
+  </nav>
+  <main>
+    <section class="container text-center h-50">
+      <img [src]="imagesLocation[indexOfCurrentImage]" alt="imagem-anime"
+           class="img-thumbnail w-50">
+    </section>
+  </main>
+  <footer class="mb-3">
+    <ul class="row justify-content-md-center list-unstyled m-0">
+      <li class="col-md-auto align-middle">
+        <p class="p-0 m-0 position-relative top-50 translate-middle-y">
+          Imagem {{indexOfCurrentImage + 1}} de {{imagesLocation.length}}
+        </p>
+      </li>
+      <li class="btn-group col-md-auto remove-select">
+        <button (click)="goToFirstImage()" [disabled]="indexOfCurrentImage === 0"
+                class="btn btn-success">
+          |<
+        </button>
+        <button (click)="goToPreviousImage()" [disabled]="indexOfCurrentImage === 0"
+                class="btn btn-primary">
+          <
+        </button>
+        <button (click)="goToNextImage()" [disabled]="indexOfCurrentImage === imagesLocation.length - 1"
+                class="btn btn-primary">
+          >
+        </button>
+        <button (click)="goToLastImage()" [disabled]="indexOfCurrentImage === imagesLocation.length - 1"
+                class="btn btn-success">
+          >|
+        </button>
+      </li>
+    </ul>
+  </footer>
+</div>

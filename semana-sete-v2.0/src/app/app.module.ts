@@ -10,7 +10,6 @@ import { CarouselComponent } from '../components/carousel/carousel.component';
   declarations: [
     AppComponent,
     CarouselComponent,
-    CarouselComponent,
   ],
   imports: [
     BrowserModule,

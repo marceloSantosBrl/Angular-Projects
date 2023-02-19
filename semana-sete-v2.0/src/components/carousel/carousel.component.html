@@ -4,37 +4,45 @@
       Fotos de anime
     </h1>
   </nav>
-  <main>
-    <section class="container text-center h-50">
-      <img [src]="imagesLocation[indexOfCurrentImage]" alt="imagem-anime"
-           class="img-thumbnail w-50">
+  <ng-container *ngIf="imagesLocation.length > 0; else noImage">
+    <main>
+      <section class="container text-center h-50">
+        <img [src]="imagesLocation[indexOfCurrentImage]" alt="imagem-anime"
+             class="img-thumbnail w-50">
+      </section>
+    </main>
+    <footer class="mb-3">
+      <ul class="row justify-content-md-center list-unstyled m-0">
+        <li class="col-md-auto align-middle">
+          <p class="p-0 m-0 position-relative top-50 translate-middle-y">
+            Imagem {{indexOfCurrentImage + 1}} de {{imagesLocation.length}}
+          </p>
+        </li>
+        <li class="btn-group col-md-auto remove-select">
+          <button (click)="goToFirstImage()" [disabled]="indexOfCurrentImage === 0"
+                  class="btn btn-success">
+            |<
+          </button>
+          <button (click)="goToPreviousImage()" [disabled]="indexOfCurrentImage === 0"
+                  class="btn btn-primary">
+            <
+          </button>
+          <button (click)="goToNextImage()" [disabled]="indexOfCurrentImage === imagesLocation.length - 1"
+                  class="btn btn-primary">
+            >
+          </button>
+          <button (click)="goToLastImage()" [disabled]="indexOfCurrentImage === imagesLocation.length - 1"
+                  class="btn btn-success">
+            >|
+          </button>
+        </li>
+      </ul>
+    </footer>
+  </ng-container>
+  <ng-template #noImage>
+    <section class="container text-center h-50 mb-auto mt-auto">
+      <img src="assets/404.jpg" alt="Image not found"
+           class="img-thumbnail w-25">
     </section>
-  </main>
-  <footer class="mb-3">
-    <ul class="row justify-content-md-center list-unstyled m-0">
-      <li class="col-md-auto align-middle">
-        <p class="p-0 m-0 position-relative top-50 translate-middle-y">
-          Imagem {{indexOfCurrentImage + 1}} de {{imagesLocation.length}}
-        </p>
-      </li>
-      <li class="btn-group col-md-auto remove-select">
-        <button (click)="goToFirstImage()" [disabled]="indexOfCurrentImage === 0"
-                class="btn btn-success">
-          |<
-        </button>
-        <button (click)="goToPreviousImage()" [disabled]="indexOfCurrentImage === 0"
-                class="btn btn-primary">
-          <
-        </button>
-        <button (click)="goToNextImage()" [disabled]="indexOfCurrentImage === imagesLocation.length - 1"
-                class="btn btn-primary">
-          >
-        </button>
-        <button (click)="goToLastImage()" [disabled]="indexOfCurrentImage === imagesLocation.length - 1"
-                class="btn btn-success">
-          >|
-        </button>
-      </li>
-    </ul>
-  </footer>
+  </ng-template>
 </div>

@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'semana-sete-v2.0';
+  public title: string = 'Fotos de anime';
 
-  imagesLocation = [
+  public imagesLocation: string[] = [
     '/assets/jojo.jpg',
     '/assets/csm.jpg',
     '/assets/geass.jpg',

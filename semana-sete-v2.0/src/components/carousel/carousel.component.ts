@@ -6,9 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent {
-  @Input() imagesLocation: string[] = [];
+  @Input() public title: string = '';
 
-  indexOfCurrentImage = 0;
+  @Input() public imagesLocation: string[] = [];
+
+  public indexOfCurrentImage = 0;
 
   goToNextImage(): void {
     if (this.indexOfCurrentImage !== this.imagesLocation.length - 1) {

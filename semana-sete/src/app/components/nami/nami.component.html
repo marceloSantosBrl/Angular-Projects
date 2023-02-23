@@ -1,0 +1,10 @@
+<div class="container">
+  <p *ngIf="!disabled">Olá meu nome é {{name}}</p>
+  <button (click)="updateCount()">+1</button>
+  <p>Fui chamado {{count}}</p>
+  <img [src]="imgSource" [alt]="name">
+  <div class="fieldset">
+    <button (click)="disabled = !disabled">Turn on/Off</button>
+    <input type="text" name="tx" id="tx" [(ngModel)]="name">
+  </div>
+</div>

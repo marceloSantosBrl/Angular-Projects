@@ -1,0 +1,11 @@
+.control-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cards-panel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

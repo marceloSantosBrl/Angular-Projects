@@ -1,0 +1,108 @@
+<form [formGroup]="characterForm">
+  <div>
+    <label class="form-label"
+           for="identity">
+      Id
+    </label>
+    <input class="form-control"
+           [ngClass]="validationService.getControlBorder(characterForm, 'id')"
+           type="text" name="identity" id="identity" formControlName="id">
+    <div class="message-container">
+      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'id')">
+        <p class="text-danger">
+          Digite um id válido
+        </p>
+      </ng-container>
+    </div>
+  </div>
+  <div>
+    <label class="form-label"
+           for="name">
+      Nome
+    </label>
+    <input class="form-control"
+           [ngClass]="validationService.getControlBorder(characterForm, 'nome')"
+           type="text" name="name" id="name" formControlName="nome">
+    <div class="message-container">
+      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'nome')">
+        <p class="text-danger">
+          Digite um nome válido
+        </p>
+      </ng-container>
+    </div>
+  </div>
+  <div>
+    <label class="form-label"
+           for="hability">
+      Habilidade
+    </label>
+    <input class="form-control"
+           [ngClass]="validationService.getControlBorder(characterForm, 'habilidade')"
+           type="text" name="hability" id="hability" formControlName="habilidade">
+    <div class="message-container">
+      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'habilidade')">
+        <p class="text-danger">
+          Digite uma habilidade válida
+        </p>
+      </ng-container>
+    </div>
+  </div>
+  <div>
+    <label class="form-label"
+           for="planet">
+      Habilidade
+    </label>
+    <input class="form-control"
+           [ngClass]="validationService.getControlBorder(characterForm, 'planeta')"
+           type="text" name="planet" id="planet" formControlName="planeta">
+    <div class="message-container">
+      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'planeta')">
+        <p class="text-danger">
+          Digite um planeta
+        </p>
+      </ng-container>
+    </div>
+  </div>
+  <div>
+    <label class="form-label"
+           for="weapons">
+      Armas
+    </label>
+    <input class="form-control"
+           [ngClass]="validationService.getControlBorder(characterForm, 'armas')"
+           type="text" name="weapons" id="weapons" formControlName="armas">
+    <div class="message-container">
+      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'armas')">
+        <p class="text-danger">
+          Digite uma arma válida
+        </p>
+      </ng-container>
+    </div>
+  </div>
+  <div>
+    <label class="form-label"
+           for="avatar">
+      Caminho da Foto do Avatar
+    </label>
+    <input class="form-control"
+           [ngClass]="validationService.getControlBorder(characterForm, 'avatar')"
+           type="text" name="avatarImagePath" id="avatar" formControlName="avatar">
+    <div class="message-container">
+      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'avatar')">
+        <p class="text-danger">
+          Digite um endereço válido
+        </p>
+      </ng-container>
+    </div>
+  </div>
+  <div class="btn-group-send">
+    <button class="btn btn-success"
+            type="button" (click)="updateCard()" [disabled]="characterForm.invalid">
+      Atualizar
+    </button>
+    <button class="btn btn-primary"
+            type="button" (click)="addCard()" [disabled]="characterForm.invalid">
+      Adicionar
+    </button>
+  </div>
+</form>

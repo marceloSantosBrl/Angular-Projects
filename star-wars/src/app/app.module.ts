@@ -8,16 +8,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from '../components/card/card.component';
 import { StarWarsComponent } from '../components/star-wars/star-wars.component';
-import { TopPanelComponent } from '../components/top-panel/top-panel.component';
-import { BottomPanelComponent } from '../components/bottom-panel/bottom-panel.component';
+import { DeletionComponent } from '../components/deletion/deletion.component';
+import { UpdateAdditionComponent } from '../components/update-adition/update-addition.component';
+import { GenerationComponent } from '../components/generation/generation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     StarWarsComponent,
-    TopPanelComponent,
-    BottomPanelComponent,
+    DeletionComponent,
+    UpdateAdditionComponent,
+    GenerationComponent,
   ],
   imports: [
     BrowserModule,

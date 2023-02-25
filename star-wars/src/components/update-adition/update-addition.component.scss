@@ -1,0 +1,15 @@
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 30rem;
+}
+
+.message-container {
+  height: 2rem;
+}
+
+.btn-group-send {
+  display: flex;
+  gap: 1rem;
+}

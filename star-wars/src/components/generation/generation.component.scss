@@ -1,0 +1,30 @@
+.form-control {
+  width: 12rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  grid-template-rows: 1.5fr 1fr;
+  place-content: center;
+  width: 25rem;
+  height: 12rem;
+}
+
+.btn {
+  width: fit-content;
+  height: fit-content;
+}
+.btn-primary {
+  margin-top: 2rem;
+}

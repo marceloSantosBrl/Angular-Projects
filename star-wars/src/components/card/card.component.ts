@@ -15,4 +15,8 @@ export class CardComponent {
   @Input() public planet: string = '';
 
   @Input() public weapons: string = '';
+
+  public openWindow(src: string) : void {
+    window.open(src, '_blank');
+  }
 }

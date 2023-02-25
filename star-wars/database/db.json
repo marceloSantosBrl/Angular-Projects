@@ -2,11 +2,27 @@
   "personagens": [
     {
       "id": 1,
-      "nome": "Marcelo Santos Passos",
-      "habilidade": "asd",
-      "planeta": "sdsd",
-      "armas": "sdsd",
-      "avatar": "adad"
+      "nome": "Luke Skywalker",
+      "habilidade": "Jedi. Além de compartilhar das habilidades naturais de piloto da sua família, Luke Skywalker desenvolveu habilidades para reparos mecânicos enquanto procurava por droides e consertava vaporizadores de umidade.",
+      "planeta": "Tatooine",
+      "armas": "Sabre de Luz verde",
+      "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/luke-300x300.png"
+    },
+    {
+      "id": 2,
+      "nome": "Princesa Leia",
+      "habilidade": "Política. Ruína dos Troopers: Essa habilidade de combate permite que Leia mate instantaneamente Stormtroopers com um único tiro. Escudo de Esquadrão Melhorado: uma versão mais poderosa do Escudo de Esquadrão normal que também pode parar ataques da Força. Leia também pode usar a Ruína dos Troopers dentro dele.",
+      "planeta": "Alderaan",
+      "armas": "Blaster",
+      "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/leia-1-300x300.png"
+    },
+    {
+      "id": 3,
+      "nome": "Darth Vader",
+      "habilidade": "Darth Vader lança seu sabre de luz, enforca os adversários e usa sua fúria profunda. Fúria Concentrada: Darth Vader causa mais dano e pode absorver mais dano. Arremesso de Sabre: Vader lança seu sabre de luz contra os inimigos",
+      "planeta": "Tatooine",
+      "armas": "Sabre de luz azul / vermelho",
+      "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/darth_vader-300x300.png"
     },
     {
       "id": 4,
@@ -17,68 +33,12 @@
       "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/C3PO-300x300.png"
     },
     {
-      "id": 5,
-      "nome": "R2-D2",
-      "habilidade": "Possui inúmeras ferramentas como serra elétrica, solda, projetor holográfico e propulsor de foguete",
-      "planeta": "Naboo",
-      "armas": "Serra e bastão",
-      "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/R2D2-300x300.png"
-    },
-    {
       "nome": "R2-D2",
       "habilidade": "Possui inúmeras ferramentas como serra elétrica, solda, projetor holográfico e propulsor de foguete",
       "planeta": "Naboo",
       "armas": "Serra e bastão",
       "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/R2D2-300x300.png",
       "id": 6
-    },
-    {
-      "id": "45",
-      "nome": "azdad",
-      "habilidade": "adad",
-      "planeta": "asdfad",
-      "armas": "afad",
-      "avatar": "fsfsf"
-    },
-    {
-      "id": "48",
-      "nome": "adad",
-      "habilidade": "asdasda",
-      "planeta": "svcdzx",
-      "armas": "asfdf",
-      "avatar": "sfdfdf"
-    },
-    {
-      "id": "98",
-      "nome": "sdsd",
-      "habilidade": "asd",
-      "planeta": "sdsd",
-      "armas": "sdsd",
-      "avatar": "adad"
-    },
-    {
-      "id": "44",
-      "nome": "adad",
-      "habilidade": "adad",
-      "planeta": "dsfsd",
-      "armas": "sfsfs",
-      "avatar": "asdad"
-    },
-    {
-      "id": "4589",
-      "nome": "sdsd",
-      "habilidade": "asd",
-      "planeta": "sdsd",
-      "armas": "sdsd",
-      "avatar": "adad"
-    },
-    {
-      "id": "4589977554",
-      "nome": "adad",
-      "habilidade": "adad",
-      "planeta": "fasfdds",
-      "armas": "fsfsf",
-      "avatar": "safsf"
     }
   ]
 }

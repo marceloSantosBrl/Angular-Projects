@@ -8,11 +8,11 @@ import { StarWarsCharacterModel } from '../../models/star-wars-character/star.wa
 import { ValidationService } from '../../services/validation-service/validation.service';
 
 @Component({
-  selector: 'app-bottom-panel',
-  templateUrl: './bottom-panel.component.html',
-  styleUrls: ['./bottom-panel.component.scss'],
+  selector: 'app-update-adition',
+  templateUrl: './update-addition.component.html',
+  styleUrls: ['./update-addition.component.scss'],
 })
-export class BottomPanelComponent implements OnDestroy {
+export class UpdateAdditionComponent implements OnDestroy {
   updateSubscription!: Subscription;
 
   addSubscription!: Subscription;

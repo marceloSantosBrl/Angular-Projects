@@ -1,0 +1,28 @@
+<form>
+  <div>
+    <label class="form-label"
+           for="generateSingleCard">
+      Digite o id do personagem
+    </label>
+    <input class="form-control"
+           [ngClass]="validationService.getControlBorder(cardFetchId)"
+           type="number" id="generateSingleCard" [formControl]="cardFetchId">
+    <ng-container *ngIf="!validationService.getControlValidity(cardFetchId)">
+      <p class="text-danger">
+        Digite um id inválido
+      </p>
+    </ng-container>
+  </div>
+  <div class="generate-all-container">
+    <button class="btn btn-primary"
+            (click)="generateAllCards()" type="button">
+      Mostrar Todos
+    </button>
+  </div>
+  <div class="generate-single-container">
+    <button class="btn btn-success"
+            (click)="generateSingleCard()" type="button" [disabled]="cardFetchId.invalid">
+      Mostrar Personagem
+    </button>
+  </div>
+</form>

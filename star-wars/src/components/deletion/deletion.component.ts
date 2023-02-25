@@ -5,19 +5,14 @@ import { StarWarsService } from '../../services/star-wars/star-wars.service';
 import { ValidationService } from '../../services/validation-service/validation.service';
 
 @Component({
-  selector: 'app-top-panel',
-  templateUrl: './top-panel.component.html',
-  styleUrls: ['./top-panel.component.scss'],
+  selector: 'app-deletion',
+  templateUrl: './deletion.component.html',
+  styleUrls: ['./deletion.component.scss'],
 })
-export class TopPanelComponent implements OnDestroy {
+export class DeletionComponent implements OnDestroy {
   private cardDeletionSubscription!: Subscription;
 
   public cardDeletionId: FormControl = new FormControl<string>(
-    '',
-    [Validators.required, Validators.pattern(/^[0-9]*$/)],
-  );
-
-  public cardFetchId: FormControl = new FormControl<string>(
     '',
     [Validators.required, Validators.pattern(/^[0-9]*$/)],
   );
@@ -26,15 +21,6 @@ export class TopPanelComponent implements OnDestroy {
     private readonly starWarsService: StarWarsService,
     public readonly validationService: ValidationService,
   ) { }
-
-  public generateSingleCard(): void {
-    this.starWarsService.getCharacter(this.cardFetchId.value);
-    this.cardFetchId.reset();
-  }
-
-  public generateAllCards(): void {
-    this.starWarsService.getAllCharacters();
-  }
 
   public deleteCard(): void {
     this.cardDeletionSubscription = this.starWarsService

@@ -1,0 +1,20 @@
+<form>
+  <label class="form-label"
+         for="deleteCard">
+    Digite o id do personagem
+  </label>
+  <input class="form-control"
+         [ngClass]="validationService.getControlBorder(cardDeletionId)"
+         type="number" id="deleteCard" [formControl]="cardDeletionId">
+  <div class="error-container">
+    <ng-container *ngIf="!validationService.getControlValidity(cardDeletionId)">
+      <p class="text-danger">
+        Digite um id inválido
+      </p>
+    </ng-container>
+  </div>
+  <button class="btn btn-danger"
+          (click)="deleteCard()" type="button" [disabled]="cardDeletionId.invalid">
+    Deletar Personagem
+  </button>
+</form>

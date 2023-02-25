@@ -1,0 +1,48 @@
+<form [formGroup]="characterForm">
+  <div>
+    <label for="identity">Id</label>
+    <input type="text" name="identity" id="identity" formControlName="id">
+    <ng-container *ngIf="!validationService.isInputValid(characterForm, 'id')">
+      <p class="text-danger">Digite um id válido</p>
+    </ng-container>
+  </div>
+  <div>
+    <label for="name">Nome</label>
+    <input type="text" name="name" id="name" formControlName="nome">
+    <ng-container *ngIf="!validationService.isInputValid(characterForm, 'nome')">
+      <p class="text-danger">Enter a valid number</p>
+    </ng-container>
+  </div>
+  <div>
+    <label for="hability">Habilidade</label>
+    <input type="text" name="hability" id="hability" formControlName="habilidade">
+    <ng-container *ngIf="!validationService.isInputValid(characterForm, 'habilidade')">
+      <p class="text-danger">Digite uma habilidade válida</p>
+    </ng-container>
+  </div>
+  <div>
+    <label for="planet">Habilidade</label>
+    <input type="text" name="planet" id="planet" formControlName="planeta">
+    <ng-container *ngIf="!validationService.isInputValid(characterForm, 'planeta')">
+      <p class="text-danger">Digite um planeta</p>
+    </ng-container>
+  </div>
+  <div>
+    <label for="weapons">Armas</label>
+    <input type="text" name="weapons" id="weapons" formControlName="armas">
+    <ng-container *ngIf="!validationService.isInputValid(characterForm, 'armas')">
+      <p class="text-danger">Digite uma arma válida</p>
+    </ng-container>
+  </div>
+  <div>
+    <label for="avatar">Caminho da Foto do Avatar</label>
+    <input type="text" name="avatarImagePath" id="avatar" formControlName="avatar">
+    <ng-container *ngIf="!validationService.isInputValid(characterForm, 'avatar')">
+      <p class="text-danger">Digite um endereço válido</p>
+    </ng-container>
+  </div>
+  <div>
+    <button type="button" (click)="updateCard()" [disabled]="characterForm.invalid">Atualizar</button>
+    <button type="button" (click)="addCard()" [disabled]="characterForm.invalid">Adicionar</button>
+  </div>
+</form>

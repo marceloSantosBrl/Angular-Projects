@@ -1,0 +1,24 @@
+<div>
+  <button (click)="generateAllCards()" type="button">Generate All Cards</button>
+</div>
+<form>
+  <div>
+    <label for="generateSingleCard">Digite o id do personagem</label>
+    <input type="number" id="generateSingleCard" [formControl]="cardFetchId">
+    <ng-container *ngIf="!validationService.isInputValid(cardFetchId)">
+      <p class="text-danger">digite um id inválido</p>
+    </ng-container>
+  </div>
+  <button (click)="generateSingleCard()" type="button" [disabled]="cardFetchId.invalid">Generate Single Cards
+  </button>
+</form>
+<form>
+  <div>
+    <label for="deleteCard">Digite o id do personagem</label>
+    <input type="number" id="deleteCard" [formControl]="cardDeletionId">
+    <ng-container *ngIf="!validationService.isInputValid(cardDeletionId)">
+      <p class="text-danger">digite um id inválido</p>
+    </ng-container>
+  </div>
+  <button (click)="deleteCard()" type="button" [disabled]="cardDeletionId.invalid">Delete Card</button>
+</form>

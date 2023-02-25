@@ -27,7 +27,10 @@ export class DeletionComponent implements OnDestroy {
       .deleteCharacter(this.cardDeletionId.value)
       .subscribe(
         {
-          complete: () => alert('Personagem deletado com sucesso'),
+          complete: () => {
+            this.starWarsService.getAllCharacters();
+            alert('Personagem deletado com sucesso');
+          },
           error: () => alert('Erro ao deletar personagem'),
         },
       );

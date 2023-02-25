@@ -40,7 +40,8 @@ export class UpdateAdditionComponent implements OnDestroy {
       .updateCharacter(starWarsCharacter.id, starWarsCharacter)
       .subscribe(
         {
-          error: () => alert('Erro ao atualizar Personagem'),
+          complete: () => alert('Personagem atualizado com sucesso'),
+          error: () => alert('Erro ao atualizar personagem'),
         },
       );
   }
@@ -52,7 +53,8 @@ export class UpdateAdditionComponent implements OnDestroy {
       .addCharacter(starWarsCharacter)
       .subscribe(
         {
-          error: () => alert('Erro ao adicionar Personagem'),
+          complete: () => alert('Personagem adicionado com sucesso'),
+          error: () => alert('Erro ao adicionar personagem'),
         },
       );
   }

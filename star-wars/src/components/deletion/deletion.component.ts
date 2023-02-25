@@ -27,7 +27,8 @@ export class DeletionComponent implements OnDestroy {
       .deleteCharacter(this.cardDeletionId.value)
       .subscribe(
         {
-          error: () => alert('Erro ao deletar Personagem'),
+          complete: () => alert('Personagem deletado com sucesso'),
+          error: () => alert('Erro ao deletar personagem'),
         },
       );
     this.cardDeletionId.reset();

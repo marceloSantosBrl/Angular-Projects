@@ -1,7 +1,3 @@
-.form-control {
-  width: 12rem;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -19,6 +15,10 @@ form {
   place-content: center;
   width: 25rem;
   height: 12rem;
+}
+
+.form-control {
+  width: 12rem;
 }
 
 .btn {

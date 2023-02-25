@@ -1,11 +1,15 @@
 .control-panel {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.7fr;
+  width: 30rem;
+  margin: 1rem;
 }
 
 .cards-panel {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 1rem;
+  margin: 1rem;
 }

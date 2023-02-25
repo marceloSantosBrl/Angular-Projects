@@ -4,17 +4,20 @@
     <app-deletion></app-deletion>
     <app-update-adition></app-update-adition>
   </section>
+  <section class="cards-panel">
+    <ng-container *ngIf="starWarsService.currentCharacters | async as characters; else errTemplate">
+      <div *ngFor="let character of characters">
+        <app-card [imgPath]="character.avatar"
+                  [name]="character.nome"
+                  [hability]="character.habilidade"
+                  [planet]="character.planeta"
+                  [weapons]="character.armas"
+        >
+        </app-card>
+      </div>
+    </ng-container>
+  </section>
 </main>
-<section class="cards-panel">
-  <ng-container *ngIf="starWarsService.currentCharacters | async as characters">
-    <div *ngFor="let character of characters">
-      <app-card [imgPath]="character.avatar"
-                [name]="character.nome"
-                [hability]="character.habilidade"
-                [planet]="character.planeta"
-                [weapons]="character.armas"
-      >
-      </app-card>
-    </div>
-  </ng-container>
-</section>
+<ng-template #errTemplate>
+  <p>Personagem não Encontrado!</p>
+</ng-template>

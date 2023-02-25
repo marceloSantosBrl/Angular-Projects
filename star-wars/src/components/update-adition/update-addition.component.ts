@@ -47,6 +47,7 @@ export class UpdateAdditionComponent implements OnDestroy {
           error: () => alert('Erro ao atualizar personagem'),
         },
       );
+    this.characterForm.reset();
   }
 
   public addCard(): void {
@@ -63,6 +64,7 @@ export class UpdateAdditionComponent implements OnDestroy {
           error: () => alert('Erro ao adicionar personagem'),
         },
       );
+    this.characterForm.reset();
   }
 
   ngOnDestroy() {

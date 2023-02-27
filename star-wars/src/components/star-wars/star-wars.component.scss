@@ -1,8 +1,10 @@
 .control-panel {
   display: grid;
   grid-template-columns: 1fr 0.7fr;
-  width: 30rem;
   margin: 1rem;
+  padding: 1rem;
+  background-color: bisque;
+  border-radius: 0.5rem;
 }
 
 .cards-panel {
@@ -12,4 +14,6 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin: 1rem;
+  background-color: bisque;
+  border-radius: 0.5rem;
 }

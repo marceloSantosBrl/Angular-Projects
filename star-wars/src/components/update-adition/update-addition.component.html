@@ -5,10 +5,10 @@
       Id
     </label>
     <input class="form-control"
-           [ngClass]="validationService.getControlBorder(characterForm, 'id')"
+           [ngClass]="getControlBorder(characterForm, 'id')"
            type="text" name="identity" id="identity" formControlName="id">
     <div class="message-container">
-      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'id')">
+      <ng-container *ngIf="!getControlValidity(characterForm, 'id')">
         <p class="text-danger">
           Digite um id válido
         </p>
@@ -21,10 +21,10 @@
       Nome
     </label>
     <input class="form-control"
-           [ngClass]="validationService.getControlBorder(characterForm, 'nome')"
+           [ngClass]="getControlBorder(characterForm, 'nome')"
            type="text" name="name" id="name" formControlName="nome">
     <div class="message-container">
-      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'nome')">
+      <ng-container *ngIf="!getControlValidity(characterForm, 'nome')">
         <p class="text-danger">
           Digite um nome válido
         </p>
@@ -37,10 +37,10 @@
       Habilidade
     </label>
     <input class="form-control"
-           [ngClass]="validationService.getControlBorder(characterForm, 'habilidade')"
+           [ngClass]="getControlBorder(characterForm, 'habilidade')"
            type="text" name="hability" id="hability" formControlName="habilidade">
     <div class="message-container">
-      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'habilidade')">
+      <ng-container *ngIf="!getControlValidity(characterForm, 'habilidade')">
         <p class="text-danger">
           Digite uma habilidade válida
         </p>
@@ -53,10 +53,10 @@
       Habilidade
     </label>
     <input class="form-control"
-           [ngClass]="validationService.getControlBorder(characterForm, 'planeta')"
+           [ngClass]="getControlBorder(characterForm, 'planeta')"
            type="text" name="planet" id="planet" formControlName="planeta">
     <div class="message-container">
-      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'planeta')">
+      <ng-container *ngIf="!getControlValidity(characterForm, 'planeta')">
         <p class="text-danger">
           Digite um planeta
         </p>
@@ -69,10 +69,10 @@
       Armas
     </label>
     <input class="form-control"
-           [ngClass]="validationService.getControlBorder(characterForm, 'armas')"
+           [ngClass]="getControlBorder(characterForm, 'armas')"
            type="text" name="weapons" id="weapons" formControlName="armas">
     <div class="message-container">
-      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'armas')">
+      <ng-container *ngIf="!getControlValidity(characterForm, 'armas')">
         <p class="text-danger">
           Digite uma arma válida
         </p>
@@ -85,10 +85,10 @@
       Caminho da Foto do Avatar
     </label>
     <input class="form-control"
-           [ngClass]="validationService.getControlBorder(characterForm, 'avatar')"
+           [ngClass]="getControlBorder(characterForm, 'avatar')"
            type="text" name="avatarImagePath" id="avatar" formControlName="avatar">
     <div class="message-container">
-      <ng-container *ngIf="!validationService.getControlValidity(characterForm, 'avatar')">
+      <ng-container *ngIf="!getControlValidity(characterForm, 'avatar')">
         <p class="text-danger">
           Digite um endereço válido
         </p>

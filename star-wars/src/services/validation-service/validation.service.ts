@@ -5,7 +5,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   providedIn: 'root',
 })
 export class ValidationService {
-  public getControlValidity(
+  public static getControlValidity(
     controlElement: FormGroup | FormControl,
     controlName?: string,
   ): boolean {
@@ -13,14 +13,18 @@ export class ValidationService {
       return !(controlElement.controls[controlName].invalid
         && (controlElement.controls[controlName].dirty
           || controlElement.controls[controlName].touched));
-    } if (controlElement instanceof FormGroup) {
+    }
+    if (controlElement instanceof FormGroup) {
       throw new Error('Expected control name');
     }
     return !(controlElement.invalid
       && (controlElement.dirty || controlElement.touched));
   }
 
-  public getControlBorder(controlElement: FormGroup | FormControl, controlName?: string): string {
+  public static getControlBorder(
+    controlElement: FormGroup | FormControl,
+    controlName?: string,
+  ): string {
     return this.getControlValidity(controlElement, controlName)
       ? '' : 'is-invalid';
   }

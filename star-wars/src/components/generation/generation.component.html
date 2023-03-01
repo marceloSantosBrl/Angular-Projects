@@ -5,9 +5,9 @@
       Digite o id do personagem
     </label>
     <input class="form-control"
-           [ngClass]="validationService.getControlBorder(cardFetchId)"
+           [ngClass]="getControlBorder(cardFetchId)"
            type="number" id="generateSingleCard" [formControl]="cardFetchId">
-    <ng-container *ngIf="!validationService.getControlValidity(cardFetchId)">
+    <ng-container *ngIf="!getControlValidity(cardFetchId)">
       <p class="text-danger">
         Digite um id inválido
       </p>

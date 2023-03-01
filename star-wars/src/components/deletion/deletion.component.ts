@@ -12,6 +12,10 @@ import { ValidationService } from '../../services/validation-service/validation.
 export class DeletionComponent implements OnDestroy {
   private cardDeletionSubscription!: Subscription;
 
+  public getControlBorder = ValidationService.getControlBorder;
+
+  public getControlValidity = ValidationService.getControlValidity;
+
   public cardDeletionId: FormControl = new FormControl<string>(
     '',
     [Validators.required, Validators.pattern(/^[0-9]*$/)],
@@ -19,7 +23,6 @@ export class DeletionComponent implements OnDestroy {
 
   constructor(
     private readonly starWarsService: StarWarsService,
-    public readonly validationService: ValidationService,
   ) { }
 
   public deleteCard(): void {

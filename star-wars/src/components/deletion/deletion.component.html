@@ -4,10 +4,10 @@
     Digite o id do personagem
   </label>
   <input class="form-control"
-         [ngClass]="validationService.getControlBorder(cardDeletionId)"
+         [ngClass]="getControlBorder(cardDeletionId)"
          type="number" id="deleteCard" [formControl]="cardDeletionId">
   <div class="error-container">
-    <ng-container *ngIf="!validationService.getControlValidity(cardDeletionId)">
+    <ng-container *ngIf="!getControlValidity(cardDeletionId)">
       <p class="text-danger">
         Digite um id inválido
       </p>

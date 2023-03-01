@@ -7,7 +7,9 @@ import { StarWarsService } from '../../services/star-wars/star-wars.service';
   styleUrls: ['./star-wars.component.scss'],
 })
 export class StarWarsComponent implements OnInit {
-  constructor(public readonly starWarsService: StarWarsService) {
+  constructor(
+    public readonly starWarsService: StarWarsService,
+  ) {
   }
 
   public ngOnInit(): void {

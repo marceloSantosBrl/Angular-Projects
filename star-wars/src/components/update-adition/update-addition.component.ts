@@ -17,6 +17,10 @@ export class UpdateAdditionComponent implements OnDestroy {
 
   addSubscription!: Subscription;
 
+  public getControlBorder = ValidationService.getControlBorder;
+
+  public getControlValidity = ValidationService.getControlValidity;
+
   public characterForm: FormGroup = this.fb.group({
     id: ['', [Validators.required, Validators.pattern(/^[0-9]*$/)]],
     nome: ['', [Validators.required, Validators.pattern(/^[a-zA-Z ]*$/)]],
@@ -29,7 +33,6 @@ export class UpdateAdditionComponent implements OnDestroy {
   constructor(
     private readonly starWarsService: StarWarsService,
     private readonly fb: NonNullableFormBuilder,
-    public readonly validationService: ValidationService,
   ) {
   }
 

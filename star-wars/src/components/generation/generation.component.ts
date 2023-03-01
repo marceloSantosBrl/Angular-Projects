@@ -14,9 +14,12 @@ export class GenerationComponent {
     [Validators.required, Validators.pattern(/^[0-9]*$/)],
   );
 
+  public getControlBorder = ValidationService.getControlBorder;
+
+  public getControlValidity = ValidationService.getControlValidity;
+
   constructor(
     private readonly starWarsService: StarWarsService,
-    public readonly validationService: ValidationService,
   ) { }
 
   public generateSingleCard(): void {

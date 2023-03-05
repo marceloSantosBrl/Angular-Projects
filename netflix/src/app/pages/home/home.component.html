@@ -1,1 +1,8 @@
-<app-cards></app-cards>
+<p>Home Works</p>
+<ng-container *ngIf="moviesList">
+  <ul>
+    <li *ngFor="let movie of moviesList.slice(5)">
+      <app-card [movie]="movie"></app-card>
+    </li>
+  </ul>
+</ng-container>

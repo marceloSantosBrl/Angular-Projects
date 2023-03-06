@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth/auth.service';
 export class LoginComponent implements OnInit {
   // eslint-disable-next-line no-underscore-dangle
   public userForm: FormGroup<any> = this._fb.group({
-    username: ['', Validators.required],
+    email: ['', Validators.required],
     password: ['', [Validators.required, Validators.minLength(8)]],
   });
 
@@ -31,10 +31,10 @@ export class LoginComponent implements OnInit {
 
   public authenticateUser(): void {
     if (this.userForm.valid) {
-      const user: string = this.userForm.controls['username'].value;
+      const email: string = this.userForm.controls['email'].value;
       const password: string = this.userForm.controls['password'].value;
       // eslint-disable-next-line no-underscore-dangle
-      this._auth.updateStatus(user, password);
+      this._auth.updateStatus(email, password);
     }
     // eslint-disable-next-line no-underscore-dangle
     if (this._auth.getUserStatus()) {

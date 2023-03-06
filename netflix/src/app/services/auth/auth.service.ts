@@ -4,15 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  private user:string = 'marcelo';
+  private email:string = 'marcelo@senai.com';
 
   private password:string = '123456789';
 
   private getCredentialsValidity(
-    user:string,
+    email:string,
     password:string,
   ): boolean {
-    return this.user === user
+    return this.email === email
     && this.password === password;
   }
 
@@ -24,10 +24,10 @@ export class AuthService {
     return window.sessionStorage.getItem('logado') === 'true';
   }
 
-  public updateStatus(user: string, password: string): void {
+  public updateStatus(email: string, password: string): void {
     if (!this.getUserStatus()) {
       this.setUserStatus(
-        this.getCredentialsValidity(user, password),
+        this.getCredentialsValidity(email, password),
       );
     }
   }

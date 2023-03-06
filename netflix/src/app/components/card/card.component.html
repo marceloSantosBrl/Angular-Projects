@@ -1,0 +1,7 @@
+<ng-container *ngIf="movie">
+  <div class="netflix-card">
+    <img class="netflix-image"
+         [src]="movie.image" [alt]="movie.title">
+  </div>
+  <p>{{movie.title}}</p>
+</ng-container>

@@ -1,1 +1,9 @@
-<p>{{'marcelo@senai.com'| emailToUser}}</p>
+<form [formGroup] = "userCredentials">
+  <label for="email">Email:</label>
+  <input type="email" id="email"
+         formControlName = "email">
+  <label for="password">Password</label>
+  <input type="password" id="password"
+         formControlName="password">
+  <button type="button" [disabled]="!userCredentials.valid">Enviar</button>
+</form>

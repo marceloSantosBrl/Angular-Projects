@@ -8,13 +8,17 @@ import { LoginComponent } from './pages/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { EmailToUserPipe } from './pipes/email-to-user.pipe';
 import {HttpClientModule} from "@angular/common/http";
+import { ContentComponent } from './layouts/content/content.component';
+import { FullComponent } from './layouts/full/full.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NotFoundComponent,
-    EmailToUserPipe
+    EmailToUserPipe,
+    ContentComponent,
+    FullComponent
   ],
   imports: [
     BrowserModule,

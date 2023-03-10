@@ -1,9 +1,19 @@
-<form [formGroup] = "userCredentials">
-  <label for="email">Email:</label>
-  <input type="email" id="email"
-         formControlName = "email">
-  <label for="password">Password</label>
-  <input type="password" id="password"
-         formControlName="password">
-  <button type="button" [disabled]="!userCredentials.valid">Enviar</button>
+<form class="container-fluid mt-5"
+  [formGroup] = "userCredentials">
+  <div class="row justify-content-center">
+    <div class="col-sm-4">
+      <label class="form-label mb-2"
+             for="email">Email:</label>
+      <input class="form-control mb-3"
+             type="email" id="email"
+             formControlName = "email">
+      <label class="form-label mb-3"
+             for="password">Senha:</label>
+      <input class="form-control mb-5"
+             type="password" id="password"
+             formControlName="password">
+      <button class="btn btn-primary"
+              type="button" [disabled]="!userCredentials.valid">Enviar</button>
+    </div>
+  </div>
 </form>

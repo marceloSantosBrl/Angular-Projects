@@ -27,6 +27,60 @@ export class InventoryService {
       price: 10,
       creator: 'Marcelo',
     },
+    {
+      productId: 3,
+      name: 'pão',
+      quantity: 2,
+      price: 10,
+      creator: 'Marcelo',
+    },
+    {
+      productId: 3,
+      name: 'pão',
+      quantity: 2,
+      price: 10,
+      creator: 'Marcelo',
+    }, {
+      productId: 3,
+      name: 'pão',
+      quantity: 2,
+      price: 10,
+      creator: 'Marcelo',
+    },
+    {
+      productId: 3,
+      name: 'pão',
+      quantity: 2,
+      price: 10,
+      creator: 'Marcelo',
+    }, {
+      productId: 3,
+      name: 'pão',
+      quantity: 2,
+      price: 10,
+      creator: 'Marcelo',
+    },
+    {
+      productId: 3,
+      name: 'pão',
+      quantity: 2,
+      price: 10,
+      creator: 'Marcelo',
+    },
+    {
+      productId: 3,
+      name: 'pão',
+      quantity: 2,
+      price: 10,
+      creator: 'Marcelo',
+    },
+    {
+      productId: 3,
+      name: 'pão',
+      quantity: 2,
+      price: 10,
+      creator: 'Marcelo Saaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    },
   ];
 
   public getProduct(productId: number): IProductListing | undefined {
@@ -40,5 +94,4 @@ export class InventoryService {
   public get inventorySize(): number {
     return this.inventory.length;
   }
-
 }

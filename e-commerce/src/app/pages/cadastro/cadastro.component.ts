@@ -1,10 +1,10 @@
-/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-underscore-dangle,class-methods-use-this,import/prefer-default-export */
 import { Component } from '@angular/core';
 import { NonNullableFormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
 import { InventoryService } from '../../services/inventory/inventory.service';
-import { CustomValidators } from '../../classes/custom-validators';
 import { IProductListing } from '../../models/iproduct-listing';
+import { CustomValidator } from '../../classes/custom-validator';
 
 @Component({
   selector: 'app-cadastro',
@@ -16,7 +16,7 @@ export class CadastroComponent {
     {
       productId: ['', [Validators.required, Validators.pattern(/^[0-9]*$/)]],
       name: ['', [Validators.required, Validators.pattern(/[A-Za-z 0-9]+$/)]],
-      price: ['', [Validators.required, CustomValidators.isNumeric]],
+      price: ['', [Validators.required, CustomValidator.notNegative]],
       quantity: ['', [Validators.required, Validators.pattern(/^[0-9]*$/)]],
     },
   );
@@ -27,23 +27,28 @@ export class CadastroComponent {
     private readonly _inventory: InventoryService,
   ) { }
 
+  private roundHundreds(value: number): number {
+    const roundingConstant = 100;
+    return Math.round(
+      Number(value) * roundingConstant,
+    ) / roundingConstant;
+  }
+
   public updateInventory(): void {
     if (this.productForm.valid) {
       const {
-        productId, price, quantity, name,
+        productId, quantity, name, price,
       } = this.productForm.controls;
-      const formattedPrice = price.value!
-        .replaceAll('.', '')
-        .replace(',', '.');
+      const numericPrice = Number(price.value);
+      const roundedPrice = this.roundHundreds(numericPrice);
       const product: IProductListing = {
         productId: Number(productId.value),
-        price: Number(formattedPrice),
+        price: roundedPrice,
         quantity: Number(quantity.value),
         name: name.value,
         creator: this._auth.currentUserEmail,
       };
       this._inventory.addProduct(product);
-      console.log(this._inventory.inventory);
     }
   }
 }

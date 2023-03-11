@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IProductListing } from '../../models/iproduct-listing';
 
 @Component({
   selector: 'app-table',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent {
-
+  @Input('inventoryProducts') inventoryProducts!: IProductListing[];
 }

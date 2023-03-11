@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { CustomValidators } from './classes/custom-validators';
+import { InventoryService } from './services/inventory/inventory.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,4 @@ import { CustomValidators } from './classes/custom-validators';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  formC = new FormControl('', [CustomValidators.isNumeric]);
 }

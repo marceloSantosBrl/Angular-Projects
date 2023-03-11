@@ -8,32 +8,44 @@
             <div class="row">
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
+                  <label class="form-label" for="name">Nome do Produto</label>
                   <input formControlName="name"
                          type="text" id="name" class="form-control form-control-lg"/>
-                  <label class="form-label" for="name">Nome do Produto</label>
+                  <output>
+                    <p>Nome Inválido</p>
+                  </output>
                 </div>
               </div>
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
+                  <label class="form-label" for="lastName">Id do Produto</label>
                   <input formControlName="productId"
                          type="text" id="lastName" class="form-control form-control-lg"/>
-                  <label class="form-label" for="lastName">Id do Produto</label>
+                  <output>
+                    <p>Id Inválido</p>
+                  </output>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 mb-4 d-flex align-items-center">
                 <div class="form-outline datepicker w-100">
+                  <label for="birthdayDate" class="form-label"> Quantidade </label>
                   <input formControlName="quantity"
                          type="text" class="form-control form-control-lg" id="birthdayDate"/>
-                  <label for="birthdayDate" class="form-label"> Quantidade </label>
+                  <output>
+                    <p>Quantidade Inválida</p>
+                  </output>
                 </div>
               </div>
               <div class="col-md-6 mb-4 pb-2">
                 <div class="form-outline">
-                  <input formControlName="price"
-                         type="email" id="emailAddress" class="form-control form-control-lg"/>
                   <label class="form-label" for="emailAddress">Preço Unitário</label>
+                  <input formControlName="price"
+                         type="number" id="emailAddress" class="form-control form-control-lg"/>
+                  <output>
+                    <p>Preço Inválido</p>
+                  </output>
                 </div>
               </div>
             </div>

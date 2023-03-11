@@ -20,13 +20,18 @@
 }
 
 .container-table {
-  width: 35rem;
   height: 30rem;
   overflow-y: scroll;
   overflow-x: scroll;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 564px) {
+  .container-table{
+    width: 25rem;
+  }
+}
+
+@media (max-width: 400px) {
   .container-table{
     width: 20rem;
   }
@@ -35,6 +40,15 @@
 .input-group-sm {
   @extend .input-group;
   width: 19rem;
+}
+
+input + output {
+  opacity: 0;
+}
+
+.form-control.ng-invalid:not(.ng-pristine) + output {
+  @extend .invalid-feedback;
+  opacity: 1;
 }
 
 body { min-height: 100vh; }

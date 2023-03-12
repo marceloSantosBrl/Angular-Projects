@@ -4,7 +4,7 @@
   <div class="row mb-3">
     <div class="col-12 col-sm-8 col-md-6">
       <label for="searchBox" class="mb-2">Digite para pesquisar o item:</label>
-      <input type="text" id="searchBox" class="form-control">
+      <input type="text" id="searchBox" class="form-control" [(ngModel)]="filterKeyword">
     </div>
   </div>
 <!--  Search Field-->
@@ -24,7 +24,7 @@
           </tr>
           </thead>
           <tbody class="overflow-scroll">
-          <tr *ngFor="let item of inventoryProducts">
+          <tr *ngFor="let item of inventoryProducts | filterTerm: filterKeyword">
             <th scope="row">{{item.productId}}</th>
             <td>{{item.name}}</td>
             <td>{{item.quantity}}</td>

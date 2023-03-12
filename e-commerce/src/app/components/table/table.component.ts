@@ -8,4 +8,6 @@ import { IProductListing } from '../../models/iproduct-listing';
 })
 export class TableComponent {
   @Input('inventoryProducts') inventoryProducts!: IProductListing[];
+
+  public filterKeyword: string = '';
 }

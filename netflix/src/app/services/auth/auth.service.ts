@@ -17,11 +17,11 @@ export class AuthService {
   }
 
   private setUserStatus(status: boolean): void {
-    window.sessionStorage.setItem('logado', status.toString());
+    window.localStorage.setItem('logado', status.toString());
   }
 
   public getUserStatus(): boolean {
-    return window.sessionStorage.getItem('logado') === 'true';
+    return window.localStorage.getItem('logado') === 'true';
   }
 
   public updateStatus(email: string, password: string): void {

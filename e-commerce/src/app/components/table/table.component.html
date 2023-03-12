@@ -1,10 +1,15 @@
 <div class="container-fluid">
+
+<!--  Search Field-->
   <div class="row mb-3">
     <div class="col-12 col-sm-8 col-md-6">
       <label for="searchBox" class="mb-2">Digite para pesquisar o item:</label>
       <input type="text" id="searchBox" class="form-control">
     </div>
   </div>
+<!--  Search Field-->
+
+<!--  Table body-->
   <div class="row">
     <div class="container-table">
       <ng-container *ngIf="inventoryProducts">
@@ -31,4 +36,6 @@
       </ng-container>
     </div>
   </div>
+<!--  Table Body-->
+
 </div>

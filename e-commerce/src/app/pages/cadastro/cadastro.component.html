@@ -8,6 +8,9 @@
           </h3>
           <form [formGroup]="productForm">
             <div class="row">
+
+              <!--              Product name field-->
+
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
                   <label class="form-label" for="name">
@@ -22,6 +25,11 @@
                   </output>
                 </div>
               </div>
+
+              <!--              /Product name field-->
+
+              <!--              Product id field-->
+
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
                   <label class="form-label" for="lastName">
@@ -36,15 +44,21 @@
                   </output>
                 </div>
               </div>
+
+              <!--            /Product id field-->
+
             </div>
             <div class="row">
+
+              <!--              Product quantity field-->
+
               <div class="col-md-6 mb-4 d-flex align-items-center">
                 <div class="form-outline datepicker w-100">
-                  <label for="birthdayDate" class="form-label">
+                  <label for="quantity" class="form-label">
                     Quantidade:
                   </label>
                   <input formControlName="quantity"
-                         type="text" class="form-control form-control-lg" id="birthdayDate"/>
+                         type="text" class="form-control form-control-lg" id="quantity"/>
                   <output>
                     <p>
                       Quantidade Inválida
@@ -52,6 +66,11 @@
                   </output>
                 </div>
               </div>
+
+              <!--              /Product quantity field-->
+
+              <!--              Product price field-->
+
               <div class="col-md-6 mb-4 pb-2">
                 <div class="form-outline">
                   <label class="form-label" for="emailAddress">
@@ -66,7 +85,13 @@
                   </output>
                 </div>
               </div>
+
+              <!--              /Product price field-->
+
             </div>
+
+            <!--            Send button-->
+
             <div class="mt-4 pt-2">
               <button type="button" class="btn btn-primary"
                       (click)="updateInventory()"
@@ -74,6 +99,9 @@
                 Enviar
               </button>
             </div>
+
+            <!--            /Send button-->
+
           </form>
         </div>
       </div>

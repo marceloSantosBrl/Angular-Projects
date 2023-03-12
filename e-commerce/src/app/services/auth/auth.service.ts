@@ -33,15 +33,15 @@ export class AuthService {
   }
 
   private set currentUserEmail(email: string) {
-    window.sessionStorage.setItem('currentUserEmail', email);
+    window.localStorage.setItem('currentUserEmail', email);
   }
 
   private set isLogged(status: boolean) {
-    window.sessionStorage.setItem('logado', status.toString());
+    window.localStorage.setItem('logado', status.toString());
   }
 
   public get isLogged() {
-    return window.sessionStorage.getItem('logado') === 'true';
+    return window.localStorage.getItem('logado') === 'true';
   }
 
   public logOut(): void {

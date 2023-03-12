@@ -1,19 +1,32 @@
 <form class="container-fluid mt-5"
-  [formGroup] = "userCredentials">
+      [formGroup]="userCredentials">
   <div class="row justify-content-center">
     <div class="col-sm-4">
-      <label class="form-label mb-2"
-             for="email">Email:</label>
-      <input class="form-control mb-3"
+      <label class="form-label d-block"
+             for="email">
+        Email:
+      </label>
+      <input class="form-control"
              type="email" id="email"
-             formControlName = "email">
-      <label class="form-label mb-3"
-             for="password">Senha:</label>
-      <input class="form-control mb-5"
+             formControlName="email">
+      <output>
+        <p>Campo inválido</p>
+      </output>
+      <label class="form-label d-block"
+             for="password">
+        Senha:
+      </label>
+      <input class="form-control"
              type="password" id="password"
              formControlName="password">
-      <button class="btn btn-primary"
-              type="button" [disabled]="!userCredentials.valid">Enviar</button>
+      <output>
+        <p>Campo inválido</p>
+      </output>
+      <button class="btn btn-primary d-block" type="button"
+              [disabled]="!userCredentials.valid"
+              (click)="attemptLogin()">
+        Enviar
+      </button>
     </div>
   </div>
 </form>

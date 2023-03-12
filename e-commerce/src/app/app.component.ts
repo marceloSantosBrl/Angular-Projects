@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { InventoryService } from './services/inventory/inventory.service';
 
 @Component({
   selector: 'app-root',

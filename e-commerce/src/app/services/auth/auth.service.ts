@@ -40,12 +40,13 @@ export class AuthService {
     window.sessionStorage.setItem('logado', status.toString());
   }
 
-  public logOut(): void {
-    this.isLogged = false;
-  }
-
   public get isLogged() {
     return window.sessionStorage.getItem('logado') === 'true';
+  }
+
+  public logOut(): void {
+    this.isLogged = false;
+    this.currentUserEmail = '';
   }
 
   public updateStatus(connectingUser: IUserCredentials): void {

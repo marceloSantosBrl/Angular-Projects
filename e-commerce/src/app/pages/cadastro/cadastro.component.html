@@ -3,26 +3,36 @@
     <div class="col-12 col-lg-9 col-xl-7">
       <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
         <div class="card-body p-4 p-md-5">
-          <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Inserir Produto</h3>
+          <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">
+            Inserir Produto
+          </h3>
           <form [formGroup]="productForm">
             <div class="row">
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <label class="form-label" for="name">Nome do Produto</label>
+                  <label class="form-label" for="name">
+                    Nome do Produto:
+                  </label>
                   <input formControlName="name"
                          type="text" id="name" class="form-control form-control-lg"/>
                   <output>
-                    <p>Nome Inválido</p>
+                    <p>
+                      Nome Inválido
+                    </p>
                   </output>
                 </div>
               </div>
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <label class="form-label" for="lastName">Id do Produto</label>
+                  <label class="form-label" for="lastName">
+                    Id do Produto:
+                  </label>
                   <input formControlName="productId"
                          type="text" id="lastName" class="form-control form-control-lg"/>
                   <output>
-                    <p>Id Inválido</p>
+                    <p>
+                      Id Inválido
+                    </p>
                   </output>
                 </div>
               </div>
@@ -30,21 +40,29 @@
             <div class="row">
               <div class="col-md-6 mb-4 d-flex align-items-center">
                 <div class="form-outline datepicker w-100">
-                  <label for="birthdayDate" class="form-label"> Quantidade </label>
+                  <label for="birthdayDate" class="form-label">
+                    Quantidade:
+                  </label>
                   <input formControlName="quantity"
                          type="text" class="form-control form-control-lg" id="birthdayDate"/>
                   <output>
-                    <p>Quantidade Inválida</p>
+                    <p>
+                      Quantidade Inválida
+                    </p>
                   </output>
                 </div>
               </div>
               <div class="col-md-6 mb-4 pb-2">
                 <div class="form-outline">
-                  <label class="form-label" for="emailAddress">Preço Unitário</label>
+                  <label class="form-label" for="emailAddress">
+                    Preço Unitário:
+                  </label>
                   <input formControlName="price"
                          type="number" id="emailAddress" class="form-control form-control-lg"/>
                   <output>
-                    <p>Preço Inválido</p>
+                    <p>
+                      Preço Inválido
+                    </p>
                   </output>
                 </div>
               </div>
@@ -52,7 +70,9 @@
             <div class="mt-4 pt-2">
               <button type="button" class="btn btn-primary"
                       (click)="updateInventory()"
-                      [disabled]="productForm.invalid">Enviar</button>
+                      [disabled]="productForm.invalid">
+                Enviar
+              </button>
             </div>
           </form>
         </div>
